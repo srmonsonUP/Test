@@ -1,6 +1,10 @@
 shinyUI(fluidPage(
-  titlePanel("Test Page")  
-  
-  
-  
+  titlePanel("Test Page"),  
+  sidebarLayout(
+    
+    sidebarPanel(position = "right"),
+    
+    mainPanel()
+    
+    )
 ))
