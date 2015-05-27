@@ -15,20 +15,18 @@ shinyUI(fluidPage(
                   '.tsv'
                 )
       ),
-      actionButton("go", "Plot"),
-      
-      br(),
-      br(),
       
       h1("Generate Data"),
       sliderInput("inputNum", "Number of data points", min = 10, max = 300, value = 50),
-      sliderInput("seed", "Seed for generator", min = 1, max = 100, value = 1)
+      sliderInput("seed", "Seed for generator", min = 1, max = 100, value = 1),
+      checkboxInput("linreg", "Linear Regression"),
+      actionButton("go", "Plot")
       
     ),
     
     mainPanel(
       plotOutput("plot"),
-      tableOutput("table")
+      dataTableOutput("table")
     )
       
   )
